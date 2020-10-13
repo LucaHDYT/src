@@ -12,26 +12,26 @@ public class HealCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(sender instanceof Player) {
 			Player player = (Player) sender;
-			if(player.hasPermission("tutorial.heal")) {
+			if(player.hasPermission("Heal.heal")) {
 				if(args.length == 0) {
 					player.setHealth(20);
 					player.setFoodLevel(20);
-					player.sendMessage("§aDu wurdest geheilt!");
+					player.sendMessage("Â§aDu wurdest geheilt!");
 				} else if(args.length == 1) {
 					Player target = Bukkit.getPlayer(args[0]);
 					if(target != null) {
 						target.setHealth(20);
 						target.setFoodLevel(20);
-						target.sendMessage("§aDu wurdest von §6" + player.getName() + " §ageheilt!");
-						player.sendMessage("§aDu hast den Spieler §6" + target.getName() + " §ageheilt.");
+						target.sendMessage("Â§aDu wurdest von Â§6" + player.getName() + " Â§ageheilt!");
+						player.sendMessage("Â§aDu hast den Spieler Â§6" + target.getName() + " Â§ageheilt.");
 					} else
-						player.sendMessage("§cDer Spieler §6" + args[0] + " §cist nicht auf dem Server!");
+						player.sendMessage("Â§cDer Spieler Â§6" + args[0] + " Â§cist nicht auf dem Server!");
 				} else
-					player.sendMessage("§cBitte benutze §6/heal <Spieler>");
+					player.sendMessage("Â§cBitte benutze Â§6/heal <Spieler>");
 			} else
-				player.sendMessage("§cDazu hast du keine Rechte!");
+				player.sendMessage("Â§cDazu hast du keine Rechte!");
 		} else
-			sender.sendMessage("§cDu bist kein Spieler!");
+			sender.sendMessage("Â§cDu bist kein Spieler!");
 		
 		return false;
 	}
