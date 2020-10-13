@@ -1,8 +1,3 @@
-// This class was created by LucaHD
-
-
-package de.luca.SpawnHealSystem.commands;
-
 import de.luca.SpawnHealSystem.main.Main;
 import de.luca.SpawnHealSystem.util.ConfigUtils;
 import org.bukkit.command.Command;
