@@ -1,6 +1,7 @@
-import de.luca.SpawnHealSystem.commands.ScoreboardCommand;
 import de.luca.SpawnHealSystem.commands.SetspawnCommand;
 import de.luca.SpawnHealSystem.commands.SpawnCommand;
+import de.luca.SpawnHealSystem.scoreboard.PlayerJoinListener;
+import de.luca.SpawnHealSystem.scoreboard.ScoreboardHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,7 +15,6 @@ public class Main extends JavaPlugin {
 	//Plugin Aktiviert!
 
 	public void onEnable() {
-		instance = this;
 		Bukkit.getConsoleSender().sendMessage("§7========================================================");
 		Bukkit.getConsoleSender().sendMessage(Main.getPrefix() + "§8>> §aDas Spawn-Heal-System wurde aktiviert!");
 		Bukkit.getConsoleSender().sendMessage("§7========================================================");
@@ -24,10 +24,12 @@ public class Main extends JavaPlugin {
 		getCommand("heal").setExecutor(new HealCommand());
 		getCommand("setspawn").setExecutor(new SetspawnCommand());
 		getCommand("spawn").setExecutor(new SpawnCommand());
-		getCommand("sb").setExecutor(new ScoreboardCommand());
-		
-		PluginManager pluginManager = Bukkit.getPluginManager();
 
+		//Listeners Registrieren!
+
+		PluginManager pluginManager = Bukkit.getPluginManager();
+		Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(), this);
+		new ScoreboardHandler().startAnimation();
 	}
 
 	//Plugin Deaktiviert!
@@ -40,10 +42,6 @@ public class Main extends JavaPlugin {
 
 	public static String getPrefix() {
 		return PREFIX;
-	}
-
-	public static Main getInstance() {
-		return instance;
 	}
 
 	//Configs
