@@ -10,5 +10,3 @@ commands:
     description: Setze den Spawn!
   Spawn:
     description: Teleportiere dich zum Spawn!
-  sb:
-    description: Lade das ScoreBoard neu!
