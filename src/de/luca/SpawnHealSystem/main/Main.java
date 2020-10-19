@@ -10,7 +10,6 @@ import de.luca.SpawnHealSystem.commands.HealCommand;
 
 public class Main extends JavaPlugin {
 	private static final String PREFIX = "§8[§6Spawn-Heal-System§8] ";
-	private static Main instance;
 
 	//Plugin Aktiviert!
 
