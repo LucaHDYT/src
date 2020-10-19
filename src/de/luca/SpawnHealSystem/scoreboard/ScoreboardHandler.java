@@ -1,5 +1,3 @@
-package de.luca.SpawnHealSystem.scoreboard;
-
 import de.luca.SpawnHealSystem.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -12,7 +10,7 @@ public class ScoreboardHandler {
     private static Integer animationCount;
 
     private String[] animation = new String[]{
-            "§6§lWillkommen", "§e§lWillkommen", "§e§lWillkommen", "§6§lWillkommen"
+            "Â§6Â§lWillkommen", "Â§eÂ§lWillkommen", "Â§eÂ§lWillkommen", "Â§6Â§lWillkommen"
     };
 
     public void setScoreboard(final Player player) {
@@ -22,10 +20,10 @@ public class ScoreboardHandler {
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         objective.setDisplayName(animation[animationCount]);
 
-        objective.getScore("§a§lNOCH IN ARBEIT").setScore(5);
-        objective.getScore("§6§lNOCH IN ARBEIT").setScore(3);
-        objective.getScore("§e§lNOCH IN ARBEIT").setScore(2);
-        objective.getScore("§a§lNOCH IN ARBEIT").setScore(1);
+        objective.getScore("Â§aÂ§lNOCH IN ARBEIT").setScore(5);
+        objective.getScore("Â§6Â§lNOCH IN ARBEIT").setScore(3);
+        objective.getScore("Â§eÂ§lNOCH IN ARBEIT").setScore(2);
+        objective.getScore("Â§aÂ§lNOCH IN ARBEIT").setScore(1);
 
         player.setScoreboard(scoreboard);
 
