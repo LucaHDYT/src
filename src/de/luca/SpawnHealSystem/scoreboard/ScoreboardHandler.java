@@ -21,8 +21,9 @@ public class ScoreboardHandler {
         objective.setDisplayName(animation[animationCount]);
 
         objective.getScore("§a§lNOCH IN ARBEIT").setScore(5);
-        objective.getScore("§6§lNOCH IN ARBEIT").setScore(3);
-        objective.getScore("§e§lNOCH IN ARBEIT").setScore(2);
+        objective.getScore("§6§lNOCH IN ARBEIT").setScore(4);
+        objective.getScore("§e§lNOCH IN ARBEIT").setScore(3);
+        objective.getScore("§a§lNOCH IN ARBEIT").setScore(2);
         objective.getScore("§a§lNOCH IN ARBEIT").setScore(1);
 
         player.setScoreboard(scoreboard);
