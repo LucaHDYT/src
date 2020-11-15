@@ -1,5 +1,5 @@
-import de.luca.SpawnHealSystem.main.Main;
-import de.luca.SpawnHealSystem.util.ConfigUtils;
+import de.lucahdyt.SpawnHealSystem.main.Main;
+import de.lucahdyt.SpawnHealSystem.util.ConfigUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Sound;
