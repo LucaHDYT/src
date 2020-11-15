@@ -1,4 +1,4 @@
-import de.luca.SpawnHealSystem.main.Main;
+import de.lucahdyt.SpawnHealSystem.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.DisplaySlot;
