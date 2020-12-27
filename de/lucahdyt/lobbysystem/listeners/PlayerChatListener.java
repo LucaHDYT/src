@@ -17,7 +17,7 @@ public class PlayerChatListener implements Listener {
     public void onChat(AsyncPlayerChatEvent e) {
         Player p = e.getPlayer();
 
-        if (p.hasPermission("lobby.chat.vip")) {
+        if (p.hasPermission("lobby.vip")) {
             e.setCancelled(false);
         } else {
             e.setCancelled(true);
